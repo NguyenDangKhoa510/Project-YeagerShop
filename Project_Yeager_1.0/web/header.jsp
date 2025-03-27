@@ -85,9 +85,11 @@
                                     </a>
                                 </div>
                             </div>
+                                <% if (AuthUtils.isLoggedIn(session) && !AuthUtils.isAdmin(session)) {%>
                             <a href="MainController?action=viewcart" class="hover:text-gray-400">
                                 <i class="fas fa-shopping-cart"></i> Giỏ hàng
                             </a>
+                            <%}%>
                         </c:when>
 
                         <c:otherwise>
